@@ -23,6 +23,8 @@ test_that("initialize gives error with bad model name", {
 
 test_that("tokens with udpipe", {
   skip_on_cran()
+  # cnlp_init_udpipe() downloads the English model when it isn't installed.
+  skip_if_offline()
 
   cnlp_init_udpipe()
   anno <- cnlp_annotate(input_files, as_strings = FALSE)
@@ -45,6 +47,7 @@ test_that("tokens with udpipe", {
 
 test_that("dependency with spacy", {
   skip_on_cran()
+  skip_if_offline()
 
   cnlp_init_udpipe()
   anno <- cnlp_annotate(input_files, as_strings = FALSE)
@@ -63,6 +66,7 @@ test_that("dependency with spacy", {
 
 test_that("cnlp_annotate options", {
   skip_on_cran()
+  skip_if_offline()
 
   cnlp_init_udpipe()
   anno <- cnlp_annotate(input_files,
