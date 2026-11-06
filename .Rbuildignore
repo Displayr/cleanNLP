@@ -11,3 +11,5 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^stanford-corenlp-full-2018-10-05.zip$
+^AGENTS\.md$
+^CLAUDE\.md$
